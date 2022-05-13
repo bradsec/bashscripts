@@ -84,8 +84,15 @@ vmware_uninstall() {
     if ! [[ -x "$(command -v vmware-installer -u vmware-${app})" ]]; then
         message INFO "VMWare ${app} not installed"
     else
-        vmware-installer -u vmware-${app}
+        vmware-installer -u vmware-${app} || true
     fi
+}
+
+vbox_install() {
+    message INFO "Installing VirtualBox..."
+    fetch_signing_key "oracle-virtual-box-archive" "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
+	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian $(get_os codename) contrib"
+    message DONE "Installation of VirtualBox completed."
 }
 
 display_menu () {
@@ -95,12 +102,14 @@ display_menu () {
     echo -e "=============="
 	echo
     echo -e "1. Install VMWare Workstation"
-    echo -e "2. Install VMWare Player\n"
-    echo -e "3. Uninstall VMWare Workstation"
-    echo -e "4. Uninstall VMWare Player\n"
-    echo -e "5. Exit"
+    echo -e "2. Install VMWare Player"
+    echo -e "3. Install Oracle Virtual Box\n"
+    echo -e "4. Uninstall VMWare Workstation"
+    echo -e "5. Uninstall VMWare Player"
+    echo -e "6. Uninstall Oracle Virtual Box\n"
+    echo -e "7. Exit"
     echo
-    echo -n "   Enter option [1-5]: "
+    echo -n "   Enter option [1-7]: "
 
     while :
     do
@@ -115,12 +124,22 @@ display_menu () {
             vmware_install player
             ;;
         3)  clear
-            vmware_uninstall workstation
+            initial_setup
+            vbox_install
             ;;
         4)  clear
-            vmware_uninstall player
+            vmware_uninstall workstation
             ;;
         5)  clear
+            vmware_uninstall player
+            ;;
+        6)  clear
+            pkgman remove virtual-box-*
+            run_command rm -f /etc/apt/sources.list.d/virtual-box*
+            pkgman update
+            pkgman cleanup
+            ;;
+        7)  clear
             exit
             ;;
 		*)  clear

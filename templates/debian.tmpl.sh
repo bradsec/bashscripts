@@ -76,6 +76,19 @@ pkgman() {
                     fi
                 fi
             ;;
+            find)
+                if [[ $(apt-cache search --names-only "${pkg}" | grep ^${pkg} | wc -l) == "1" ]]; then
+                    pkg_match=$(dpkg --get-selections | grep ^${pkg} | sed 's/\s.*$//')
+                    echo ${pkg_match}
+                fi
+            ;;
+            size)
+                if [[ $(apt-cache --no-all-versions show ${pkg} | grep '^Size: ' | wc -l) == "1" ]]; then
+                    pkg_raw_size=$(apt-cache --no-all-versions show ${pkg} | grep '^Size: ' | awk '{print $2}')
+                    pkg_size=$(echo ${pkg_raw_size} | numfmt --to=iec)
+                    echo ${pkg_size}
+                fi
+            ;;
 	 		*) message FAIL "Invalid pkgman() function usage."
              ;;
 		    esac

@@ -100,6 +100,14 @@ vbox_install() {
     message DONE "Installation of VirtualBox completed."
 }
 
+vbox_uninstall() {
+    vbox_pkg=$(dpkg --get-selections | grep virtualbox | sed 's/\s.*$//')
+    pkgman remove ${vbox_pkg}
+    run_command rm -f /etc/apt/sources.list.d/virtual-box*
+    pkgman update
+    pkgman cleanup
+}
+
 display_menu () {
 	echo
     echo -e "=============="                         
@@ -139,11 +147,7 @@ display_menu () {
             vmware_uninstall player
             ;;
         6)  clear
-            vbox_pkg=$(dpkg --get-selections | grep virtualbox | sed 's/\s.*$//')
-            pkgman remove ${vbox_pkg}
-            run_command rm -f /etc/apt/sources.list.d/virtual-box*
-            pkgman update
-            pkgman cleanup
+            vbox_uninstall
             ;;
         7)  clear
             exit

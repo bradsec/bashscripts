@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+SCRIPT_SOURCE="github.com/bradsec/bashscripts/codeedit.sh"
+
 #### START OF REQUIRED INFORMATION FOR IMPORTING BASH TEMPLATES ###
 TEMPLATES_REQUIRED="generic.tmpl.sh debian.tmpl.sh"
-SCRIPT_NAME="codeedit.sh"
 
 # Imports bash script functions from a local template or the github hosted template file.
 import_templates() {
@@ -27,7 +28,7 @@ import_templates() {
 
 import_templates ${TEMPLATES_REQUIRED}
 clear
-message INFO "Source: github.com/bradsec/bashscripts/${SCRIPT_NAME}\n"
+message INFO "Source: ${SCRIPT_SOURCE}\n"
 get_date_time
 get_os summary
 ### END OF REQUIRED FUNCTION ###

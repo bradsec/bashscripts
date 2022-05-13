@@ -92,6 +92,9 @@ vbox_install() {
     message INFO "Installing VirtualBox..."
     fetch_signing_key "oracle-virtual-box-archive" "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
 	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian $(get_os codename) contrib"
+    pkgman update
+    vbox_pkg=$(apt-cache search virtualbox | grep Oracle | awk '{print 1}')
+    pkgman install ${vbox_pkg}
     message DONE "Installation of VirtualBox completed."
 }
 

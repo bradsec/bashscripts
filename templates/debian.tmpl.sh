@@ -32,6 +32,11 @@ pkgman() {
 			aptinstalled=false
 		fi
 
+        if [[ ${snapinstalled} == false ]] && [[ ${aptinstalled} == false ]]; then
+            task PASSINFO "Package: ${pkg} is not installed."
+        fi
+
+
         case ${1} in
 
 			install)

@@ -94,7 +94,7 @@ vbox_install() {
 	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian $(get_os codename) contrib"
     pkgman update
     vbox_pkg=$(apt-cache search virtualbox | grep Oracle | sed 's/\s.*$//')
-    message WARN "Oracle VirtualBox package is $(pkgman size ${vbox_pkg}) in size."
+    pkgman size ${vbox_pkg}
     wait_for user_continue
     pkgman install ${vbox_pkg}
     message DONE "Installation of VirtualBox completed."

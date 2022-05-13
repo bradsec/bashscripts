@@ -85,8 +85,8 @@ pkgman() {
             size)
                 if [[ $(apt-cache --no-all-versions show ${pkg} | grep '^Size: ' | wc -l) == "1" ]]; then
                     pkg_raw_size=$(apt-cache --no-all-versions show ${pkg} | grep '^Size: ' | awk '{print $2}')
-                    pkg_size="$(echo ${pkg_raw_size} | numfmt --to=iec | xargs)"
-                    echo -ne ${pkg_size}
+                    pkg_size="$(echo ${pkg_raw_size} | numfmt --to=iec)"
+                    message INFO "The installation size of package ${pkg} is ${pkg_size}."
                 fi
             ;;
 	 		*) message FAIL "Invalid pkgman() function usage."

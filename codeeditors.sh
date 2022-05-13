@@ -116,7 +116,7 @@ display_menu () {
 			run_command rm -f /etc/apt/sources.list.d/vscode.list
 			pkgman update
 			;;
-		8)  echo -e "\nExiting...\n"
+		8)  clear
 			exit
 			;;
 		*)  clear

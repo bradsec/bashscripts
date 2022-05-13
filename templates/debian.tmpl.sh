@@ -162,59 +162,6 @@ remove_opt_app() {
 	fi
 }
 
-
-# Function to return OS and hardware details
-# Usage example 1: get_os summary
-# Usage example 2: thisvar=$(get_os release)
-get_os() {
-	if [[ $(command -v lsb_release) ]] >/dev/null 2>&1; then
-        local codename=$(lsb_release -c --short)
-        local release=$(lsb_release -r --short)
-        local dist=$(lsb_release -d --short)
-        local distid=$(lsb_release -i --short)
-        local arch=$(uname -m)
-        local dpkg_arch=$(dpkg --print-architecture)
-        local check_cpu=$(cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2 | xargs)
-        local check_model=$(cat /proc/cpuinfo | grep Model | head -1 | cut -d':' -f2 | xargs)
-        if [[ -z "${check_cpu}" ]]; then
-            local hardware="${check_model}"
-        else
-            local hardware="${check_cpu}"
-        fi
-
-        case ${1} in
-            
-            codename)
-                echo -ne ${codename}
-            ;;
-            release)
-                echo -ne ${release}
-            ;;
-            dist)
-                echo -ne ${distro}
-            ;;
-            distid)
-                echo -ne ${distid}
-            ;;
-            arch)
-                echo -ne ${arch}
-            ;;
-            dpkg_arch)
-                echo -ne ${dpkg_arch}
-            ;;
-            hardware)
-                echo -ne ${hardware}
-            ;;
-            summary)
-                message INFO "OS Detected: ${dist} ${arch}"
-                message INFO "Hardware Detected: ${hardware}"
-            ;;
-            *) message WARN "Invalid get_os() function usage."
-            ;;
-        esac
-    fi
-}
-
 # Function to check if a service is active will return green tick or red cross.
 is_active() {
     if [[ $(systemctl is-active "$1") == "active" ]] &>/dev/null; then

@@ -69,6 +69,71 @@ get_date_time() {
 	message INFO "$(date +"%d-%b-%Y %H:%M:%S")"
 }
 
+
+
+# Function to return OS and hardware details
+# Usage example 1: get_os summary
+# Usage example 2: thisvar=$(get_os release)
+get_os() {
+	if [[ $(command -v lsb_release) ]] >/dev/null 2>&1; then
+        local codename=$(lsb_release -c --short)
+        local release=$(lsb_release -r --short)
+        local dist=$(lsb_release -d --short)
+        local distid=$(lsb_release -i --short)
+        local arch=$(uname -m)
+        local dpkg_arch=$(dpkg --print-architecture)
+        local check_cpu=$(cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2 | xargs)
+        local check_model=$(cat /proc/cpuinfo | grep Model | head -1 | cut -d':' -f2 | xargs)
+        if [[ -z "${check_cpu}" ]]; then
+            local hardware="${check_model}"
+        else
+            local hardware="${check_cpu}"
+        fi
+
+        case ${1} in
+            
+            codename)
+                echo -ne ${codename}
+            ;;
+            release)
+                echo -ne ${release}
+            ;;
+            dist)
+                echo -ne ${distro}
+            ;;
+            distid)
+                echo -ne ${distid}
+            ;;
+            arch)
+                echo -ne ${arch}
+            ;;
+            dpkg_arch)
+                echo -ne ${dpkg_arch}
+            ;;
+            hardware)
+                echo -ne ${hardware}
+            ;;
+            summary)
+                message INFO "OS Detected: ${dist} ${arch}"
+                message INFO "Hardware Detected: ${hardware}"
+            ;;
+            *) message WARN "Invalid get_os() function usage."
+            ;;
+        esac
+    elif [[ $(sysctl -n machdep.cpu.brand_string) ]] >/dev/null 2>&1; then
+        local hardware=$(sysctl -n machdep.cpu.brand_string | xargs)
+        local dist=$(sw_vers -productVersion | xargs)
+            case ${1} in
+                summary)
+                message INFO "OS Detected: ${dist} ${arch}"
+                message INFO "Hardware Detected: ${hardware}"
+                ;;
+                *) message WARN "Invalid get_os() function usage."
+                ;;
+            esac
+    fi
+}
+
 # Display press any key or do you wish to continue y/N.
 # Example usage: wait_for user_anykey OR wait_for user_continue
 wait_for() {

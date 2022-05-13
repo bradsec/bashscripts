@@ -90,6 +90,8 @@ vmware_uninstall() {
 
 vbox_install() {
     message INFO "Installing VirtualBox..."
+    message WARN "Oracle VirtualBox package is approximately 150MB in size."
+    wait_for user_continue
     fetch_signing_key "oracle-virtual-box-archive" "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
 	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian $(get_os codename) contrib"
     pkgman update
@@ -137,7 +139,8 @@ display_menu () {
             vmware_uninstall player
             ;;
         6)  clear
-            pkgman remove virtual-box-*
+            vbox_pkg=$(dpkg --get-selections | grep virtualbox | sed 's/\s.*$//')
+            pkgman remove ${vbox_pkg}
             run_command rm -f /etc/apt/sources.list.d/virtual-box*
             pkgman update
             pkgman cleanup

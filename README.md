@@ -10,10 +10,6 @@
 * Installs to `/opt/{passwordmanagername}`
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/passman.sh" target="_blank">passman.sh</a>
 ```terminal
-==========================
- Password Manager Install 
-==========================
-
 1. Install Bitwarden (Uses an online vault)
 2. Install KeePassXC (Uses an offline vault)
 
@@ -32,10 +28,6 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 * Brave can then be removed and installed using `sudo apt install brave-browser` and `sudo apt remove brave-browser`  
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/browsers.sh" target="_blank">browsers.sh</a>
 ```terminal
-===================
- Browser Installer 
-===================
-
 1. Install Firefox
 2. Install Brave
 3. Install Tor Browser
@@ -54,10 +46,6 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 * Menu can also be used to later uninstall the application.  
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/codeeditors.sh" target="_blank">codeeditors.sh</a>
 ```terminal
-==============
- Menu Options 
-==============
-
 1. Install Sublime-Text 3
 2. Install Sublime-Text 4
 3. Install VS Codium
@@ -80,10 +68,6 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 * Menu can also be used to later uninstall the application. 
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/vmware.sh" target="_blank">vmware.sh</a>
 ```terminal
-=====================
- VMWare Menu Options 
-=====================
-
 1. Install VMWare Workstation
 2. Install VMWare Player
 
@@ -101,10 +85,6 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 * *Not currently working on Ubuntu*
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/unifi.sh" target="_blank">unifi.sh</a>
 ```terminal
-============================
- Unifi Controller Installer 
-============================
-
 1. Setup Unifi Controller
 2. Remove Unifi Controller
 ```

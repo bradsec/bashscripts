@@ -44,7 +44,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 ### 3. Debian/Ubuntu | Code Editors
 * Script will provide a menu list of Code editors (Sublime-Text, VSCode or Codium) to install.
 * Menu can also be used to later uninstall the application.  
-* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/codeeditors.sh" target="_blank">codeeditors.sh</a>
+* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/codeedit.sh" target="_blank">codeedit.sh</a>
 ```terminal
 1. Install Sublime-Text 3
 2. Install Sublime-Text 4
@@ -57,7 +57,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeeditors.sh)"
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeedit.sh)"
 ```
 
 ### 4. Debian/Ubuntu | VMWare Workstation or Player

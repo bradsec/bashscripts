@@ -125,7 +125,7 @@ get_os() {
         local dist=$(sw_vers -productVersion | xargs)
             case ${1} in
                 summary)
-                message INFO "OS Detected: ${dist} ${arch}"
+                message INFO "OS Detected: macOS ${dist} ${arch}"
                 message INFO "Hardware Detected: ${hardware}"
                 ;;
                 *) message WARN "Invalid get_os() function usage."

@@ -2,6 +2,7 @@
 
 #### START OF REQUIRED INFORMATION FOR IMPORTING BASH TEMPLATES ###
 TEMPLATES_REQUIRED="generic.tmpl.sh debian.tmpl.sh"
+SCRIPT_NAME="unifi.sh"
 
 # Imports bash script functions from a local template or the github hosted template file.
 import_templates() {
@@ -26,7 +27,7 @@ import_templates() {
 
 import_templates ${TEMPLATES_REQUIRED}
 clear
-message INFO "Source: github.com/bradsec/bashscripts/${0}\n"
+message INFO "Source: github.com/bradsec/bashscripts/${SCRIPT_NAME}\n"
 get_date_time
 get_os summary
 ### END OF REQUIRED FUNCTION ###

@@ -68,7 +68,10 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 
 ### 5. Debian/Raspberry Pi | Unifi Controller
 * Script will install configure unifi controller on core Debian or Raspberry Pi OS
-* Current included and tested version is 7.1.61
+* Tested on Pi 3B and 4 running Raspberry Pi OS Lite (April 2022 release) Debian 11 
+* **IMPORTANT: BACKUP ANY EXISTING UNIFI CONTROLLER CONFIGURATION FIRST**
+* Settings > System > [Backup] > Download Backup
+(bullseye)
 * *Not currently working on Ubuntu*
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/unifi.sh" target="_blank">unifi.sh</a>
 ```terminal

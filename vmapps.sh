@@ -91,7 +91,12 @@ vmware_uninstall() {
 vbox_install() {
     message INFO "Installing VirtualBox..."
     fetch_signing_key "oracle-virtual-box-archive" "https://www.virtualbox.org/download/oracle_vbox_2016.asc"
-	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian $(get_os codename) contrib"
+    code_name="$(get_os codename)"
+    # As at 14 May 2022 no release for Ubuntu jammy
+    if [[ ${code_name} == "jammy" ]]; then
+        code_name="focal"
+    fi
+	add_apt_source "oracle-virtual-box-archive" "virtual-box.list" "https://download.virtualbox.org/virtualbox/debian ${code_name} contrib"
     pkgman update
     vbox_pkg=$(apt-cache search virtualbox | grep Oracle | sed 's/\s.*$//')
     pkgman size ${vbox_pkg}

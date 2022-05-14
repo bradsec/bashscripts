@@ -106,9 +106,14 @@ vbox_install() {
 }
 
 vbox_uninstall() {
-    vbox_pkg=$(dpkg --get-selections | grep virtualbox | sed 's/\s.*$//')
-    pkgman remove ${vbox_pkg}
-    run_command rm -f /etc/apt/sources.list.d/virtual-box*
+    vbox_pkg=
+    if [[ $(dpkg --get-selections | grep virtualbox) ]] &>/dev/null; then
+       vbox_pkg=$(dpkg --get-selections | grep virtualbox | sed 's/\s.*$//')
+       pkgman remove ${vbox_pkg}
+       run_command rm -f /etc/apt/sources.list.d/virtual-box*
+    else
+        message INFO "No VirtualBox package found."
+    fi
     pkgman update
     pkgman cleanup
 }

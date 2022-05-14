@@ -168,6 +168,19 @@ check_superuser() {
     fi
 }
 
+# Get non-root user
+get_user() {
+    if [[ $(command -v logname) ]] >/dev/null 2>&1; then
+        echo -ne "$(logname)"
+    elif [[ ! -z ${SUDO_USER} ]]; then
+        echo -ne "${SUDO_USER}"
+    elif [[ $(command -v whoami) ]] >/dev/null 2>&1; then
+        echo -ne "$(whoami)"
+    else
+        echo -ne "${USER}"
+    fi
+}
+
 # Spinner used to show command is running.
 # Ref: https://www.shellscript.sh/tips/spinner/
 spinner()

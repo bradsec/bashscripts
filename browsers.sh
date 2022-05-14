@@ -96,7 +96,7 @@ install_tor_browser(){
 	download_file ${save_file} ${from_url}
 	run_command tar -xvJf ${save_file} --directory /opt/
 	pkg_path="/opt/$(ls /opt/ | grep tor-browser)"
-	run_command chown -R $(logname):$(logname) ${pkg_path}
+	run_command chown -R $(get_user):$(get_user) ${pkg_path}
 	run_command chmod 755 ${pkg_path}/start-tor-browser.desktop
 	run_command ln -sf ${pkg_path}/start-tor-browser.desktop /usr/sbin/tor-browser
 	run_command cd ${pkg_path}

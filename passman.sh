@@ -65,6 +65,7 @@ install_opt_app() {
     # Modify permissions and links
 	run_command sudo chmod 755 /opt/${app}/${app}.AppImage
 	run_command sudo chmod 644 /opt/${app}/${app}-icon.png
+    run_command chown -R $(get_user):$(get_user) "/opt/${app}"
 	run_command ln -sf /opt/${app}/${app}.AppImage /usr/sbin/${app}
     # Config for desktop
     desktop_config="[Desktop Entry]

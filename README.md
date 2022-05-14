@@ -12,9 +12,6 @@
 ```terminal
 1. Install Bitwarden (Uses an online vault)
 2. Install KeePassXC (Uses an offline vault)
-
-3. Remove Bitwarden
-4. Remove KeePassXC
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
@@ -31,10 +28,6 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 1. Install Firefox
 2. Install Brave
 3. Install Tor Browser
-
-4. Remove Firefox
-5. Remove Brave
-6. Remove Tor Browser
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
@@ -50,33 +43,27 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 2. Install Sublime-Text 4
 3. Install VS Codium
 4. Install VS Code
-
-5. Remove Sublime-Text
-6. Remove VS Codium
-7. Remove VS Code
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeedit.sh)"
 ```
 
-### 4. Debian/Ubuntu | VMWare Workstation or Player
+### 4. Debian/Ubuntu | VM Ware Workstation/Player and Oracle Virtual Box
 * Script will allow installation of either VMWare Workstation or Player on Debian OS systems.
 * Script will install the latest host modules from https://github.com/mkubecek/vmware-host-modules which allows it to install correctly on latest kernels. Working with Ubuntu 22.04.
 * Note the download linux installation bundle for VMWare products is about **500MB**.  
 * The original download bundle will be left in the `/tmp` directory. It can be removed or saved to alternate location if required.
 * Menu can also be used to later uninstall the application. 
-* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/vmware.sh" target="_blank">vmware.sh</a>
+* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/vmapps.sh" target="_blank">vmware.sh</a>
 ```terminal
 1. Install VMWare Workstation
 2. Install VMWare Player
-
-3. Uninstall VMWare Workstation
-4. Uninstall VMWare Player
+3. Install Oracle Virtual Box
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmware.sh)"
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"
 ```
 
 ### 5. Debian/Raspberry Pi | Unifi Controller
@@ -101,9 +88,6 @@ unifi.service - unifi
      Loaded: loaded (/lib/systemd/system/unifi.service; enabled; vendor preset: enabled)
      Active: active (running) since Thu 2022-05-12 14:52:18 AEST; 2min 17s ago
     Process: 511 ExecStart=/usr/lib/unifi/bin/unifi.init start (code=exited, status=0/SUCCESS)
-   Main PID: 643 (jsvc)
-      Tasks: 102 (limit: 4163)
-        CPU: 2min 24.560s
 ```
 * Once the service is running you can access the Unifi controller via a browser - https://localhost:8443 or https://unifihostipaddress:8443
 * This needs to be HTTPS not HTTP otherwise you will get bad request. The Unifi controller runs on port 8443 by default. If you don't specify this at the end of the address you will get unable to connect or not found. 

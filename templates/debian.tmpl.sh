@@ -19,7 +19,6 @@ pkgman() {
                 task PASSINFO "Found snap installation of package: ${pkg}"
                 snapinstalled=true
             else
-                task PASS
                 snapinstalled=false
             fi
         fi
@@ -28,7 +27,6 @@ pkgman() {
             task PASSINFO "Found apt installation of package: ${pkg}"
 			aptinstalled=true
 		else
-            task PASS
 			aptinstalled=false
 		fi
 

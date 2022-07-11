@@ -18,9 +18,22 @@
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/passman.sh)"
 ```
 
-### 2. Debian/Ubuntu | Browser (Firefox / Brave / Tor) Installer for Linux
+### 2. Debian/Ubuntu | Note-Taking Apps (Joplin / Standard Notes) Installer for Linux
+* Script will download latest Joplin or Standard Notes AppImage and create a desktop icon.  
+* Installs to `/opt/{noteappname}`
+* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/noteapps.sh" target="_blank">noteapps.sh</a>
+```terminal
+1. Install Joplin
+2. Install Standard Notes
+```
+* *Clone repo or use one-liner command below:*
+```terminal
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/noteapps.sh)"
+```
+
+### 3. Debian/Ubuntu | Browser (Firefox / Brave / TOR) Installer for Linux
 * Firefox install will remove any pre-existing Firefox package installations including Firefox ESR and replaced with latest version.  
-* Firefox and Tor Browser install into `/opt/`
+* Firefox and TOR Browser install into `/opt/`
 * Brave installs using publisher signing key and added apt source.
 * Brave can then be removed and installed using `sudo apt install brave-browser` and `sudo apt remove brave-browser`  
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/browsers.sh" target="_blank">browsers.sh</a>
@@ -34,7 +47,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/browsers.sh)"
 ```
 
-### 3. Debian/Ubuntu | Code Editors
+### 4. Debian/Ubuntu | Code Editors
 * Script will provide a menu list of Code editors (Sublime-Text, VSCode or Codium) to install.
 * Menu can also be used to later uninstall the application.  
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/codeedit.sh" target="_blank">codeedit.sh</a>
@@ -49,7 +62,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeedit.sh)"
 ```
 
-### 4. Debian/Ubuntu | VM Ware Workstation/Player and Oracle Virtual Box
+### 5. Debian/Ubuntu | VM Ware Workstation/Player and Oracle Virtual Box
 * Script will allow installation of either VMWare Workstation or Player on Debian OS systems.
 * Script will install the latest host modules from https://github.com/mkubecek/vmware-host-modules which allows it to install correctly on latest kernels. Working with Ubuntu 22.04.
 * Note the download linux installation bundle for VMWare products is about **500MB**.  
@@ -66,7 +79,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"
 ```
 
-### 5. Debian/Raspberry Pi | Unifi Controller
+### 6. Debian/Raspberry Pi | Unifi Controller
 * Script will install configure unifi controller on core Debian or Raspberry Pi OS
 * Tested on Pi 3B and 4 running Raspberry Pi OS Lite (April 2022 release) Debian 11 (bullseye)
 * **IMPORTANT: BACKUP ANY EXISTING UNIFI CONTROLLER CONFIGURATION FIRST**

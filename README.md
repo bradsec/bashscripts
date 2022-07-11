@@ -1,6 +1,6 @@
 ## Bash Scripts
 ### Installation and Configuration Scripts for Debian based systems and macOS
-* Installers will use latest sources where possible from original publisher.
+* Installers will use latest sources where possible from original publisher sites or github release repos.
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
 * *Note: Scripts inherit common functions from the imported <a href="https://github.com/bradsec/bashscripts/tree/main/templates" target="_blank">templates</a>.*
 <br/><br/>

@@ -87,7 +87,7 @@ install_brave() {
 }
 
 install_tor_browser(){
-	message INFOFULL "This will install the latest Tor-Browser version."
+	message INFOFULL "This will install the latest TOR-Browser version."
 	pkgman install curl
 	tor_link="https://www.torproject.org$(curl -s https://www.torproject.org/download/ | \
 	grep linux | sed -r 's/.*href="([^"]+).*/\1/g' | awk 'NR==1')"
@@ -101,7 +101,16 @@ install_tor_browser(){
 	run_command ln -sf ${pkg_path}/start-tor-browser.desktop /usr/sbin/tor-browser
 	run_command cd ${pkg_path}
 	su -c './start-tor-browser.desktop --register-app' $(logname) >/dev/null 2>&1
-	message DONEFULL "Tor-Browser installed."
+	message DONEFULL "TOR-Browser installed."
+}
+
+install_chrome() {
+	message INFO "Installing Google Chrome..."
+	pkgman remove google-chrome-stable
+	from_url="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+	save_file="/tmp/chrome.deb"
+	download_file ${save_file} ${from_url}
+	pkgman install ${save_file}
 }
 
 
@@ -112,14 +121,16 @@ display_menu () {
     echo -e "=============="
 	echo
     echo -e "1. Install Firefox"
-    echo -e "2. Install Brave"
-	echo -e "3. Install Tor Browser\n"
-    echo -e "4. Remove Firefox"
-    echo -e "5. Remove Brave"
-	echo -e "6. Remove Tor Browser\n"
-    echo -e "7. Exit"
+	echo -e "2. Install Google Chrome"
+    echo -e "3. Install Brave"
+	echo -e "4. Install TOR Browser\n"
+    echo -e "5. Remove Firefox"
+	echo -e "6. Remove Google Chrome"
+    echo -e "7. Remove Brave"
+	echo -e "8. Remove TOR Browser\n"
+    echo -e "9. Exit"
     echo
-    echo -n "   Enter option [1-7]: "
+    echo -n "   Enter option [1-9]: "
 
     while :
     do
@@ -129,24 +140,32 @@ display_menu () {
             install_firefox
             ;;
         2)  clear
-            install_brave
+            install_chrome
             ;;
         3)  clear
-            install_tor_browser
+            install_brave
             ;;
         4)  clear
-            remove_opt_app firefox
+            install_tor_browser
             ;;
         5)  clear
+            remove_opt_app firefox
+            ;;
+        6)  clear
+            pkgman remove google-chrome-stable
+			pkgman update
+			pkgman cleanup
+            ;;
+        7)  clear
             pkgman remove brave-browser
 			run_command rm -f /etc/apt/sources.list.d/brave-browser*
 			pkgman update
 			pkgman cleanup
             ;;
-		6)  clear
+		8)  clear
             remove_opt_app tor-browser
             ;;
-        7)  clear
+        9)  clear
             exit
             ;;
 		*)  clear

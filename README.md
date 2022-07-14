@@ -32,14 +32,14 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 ```
 
 ### 3. Debian/Ubuntu | Secure Messenger Apps (Signal / Threema) Installer for Linux
-* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/messenger.sh" target="_blank">messenger.sh</a>
+* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/messapps.sh" target="_blank">messapps.sh</a>
 ```terminal
 1. Install Signal
 2. Install Threema
 ```
 * *Clone repo or use one-liner command below:*
 ```terminal
-sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messenger.sh)"
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messapps.sh)"
 ```
 
 ### 4. Debian/Ubuntu | Browser (Firefox / Brave / TOR) Installer for Linux

@@ -31,7 +31,18 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/noteapps.sh)"
 ```
 
-### 3. Debian/Ubuntu | Browser (Firefox / Brave / TOR) Installer for Linux
+### 3. Debian/Ubuntu | Secure Messenger Apps (Signal / Threema) Installer for Linux
+* View script: <a href="https://github.com/bradsec/bashscripts/tree/main/messenger.sh" target="_blank">messenger.sh</a>
+```terminal
+1. Install Signal
+2. Install Threema
+```
+* *Clone repo or use one-liner command below:*
+```terminal
+sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messenger.sh)"
+```
+
+### 4. Debian/Ubuntu | Browser (Firefox / Brave / TOR) Installer for Linux
 * Firefox install will remove any pre-existing Firefox package installations including Firefox ESR and replaced with latest version.  
 * Firefox and TOR Browser install into `/opt/`
 * Brave installs using publisher signing key and added apt source.
@@ -47,7 +58,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/browsers.sh)"
 ```
 
-### 4. Debian/Ubuntu | Code Editors
+### 5. Debian/Ubuntu | Code Editors
 * Script will provide a menu list of Code editors (Sublime-Text, VSCode or Codium) to install.
 * Menu can also be used to later uninstall the application.  
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/codeedit.sh" target="_blank">codeedit.sh</a>
@@ -62,7 +73,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeedit.sh)"
 ```
 
-### 5. Debian/Ubuntu | VM Ware Workstation/Player and Oracle Virtual Box
+### 6. Debian/Ubuntu | VM Ware Workstation/Player and Oracle Virtual Box
 * Script will allow installation of either VMWare Workstation or Player on Debian OS systems.
 * Script will install the latest host modules from https://github.com/mkubecek/vmware-host-modules which allows it to install correctly on latest kernels. Working with Ubuntu 22.04.
 * Note the download linux installation bundle for VMWare products is about **500MB**.  
@@ -79,7 +90,7 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"
 ```
 
-### 6. Debian/Raspberry Pi | Unifi Controller
+### 7. Debian/Raspberry Pi | Unifi Controller
 * Script will install configure unifi controller on core Debian or Raspberry Pi OS
 * Tested on Pi 3B and 4 running Raspberry Pi OS Lite (April 2022 release) Debian 11 (bullseye)
 * **IMPORTANT: BACKUP ANY EXISTING UNIFI CONTROLLER CONFIGURATION FIRST**

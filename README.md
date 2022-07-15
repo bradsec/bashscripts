@@ -1,4 +1,4 @@
-## [bashscripts] Installation and Configuration Scripts for Debian based systems and macOS
+## [bashscripts]
 These scripts have been created to simplify and automate the installation of various Debian Linux and some macOS applications. The scripts will work with most Debian based Linux distros such as Ubuntu, Kali and Pop!_OS.
 
 ### Notes

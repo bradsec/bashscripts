@@ -1,13 +1,13 @@
 ## [bashscripts]
 These scripts have been created to simplify and automate the installation of various Debian Linux and some macOS applications. The scripts will work with most Debian based Linux distros such as Ubuntu, Kali and Pop!_OS.
 
-## Notes
+### Notes
 * Scripts inherit common functions from the imported <a href="https://github.com/bradsec/bashscripts/tree/main/templates" target="_blank">templates</a>.  
 * Most of the Debian app installers fetch 64-bit architecture sources, the script sources may need modification to run on other system architecture such as 32-bit.
 * Installers will use latest sources where possible from original publisher sites or github release repos.  
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
 
-## Usage Options
+### Usage Options
 1. Clone the repo `git clone https://github.com/bradsec/bashscripts.git` and run the required .sh script.
 2. Alternatively copy/use run the script directly :- 
 ```
@@ -24,16 +24,16 @@ Scriptname | Compatability | Applications
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messengerapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/browserapps.sh" target="_blank">browserapps.sh</a> | Debian/Ubuntu | **Firefox, Google Chrome, Brave, TOR Browser**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/browserapps.sh)"```
-<a href="https://github.com/bradsec/bashscripts/tree/main/codeditapps.sh" target="_blank">codeditapps.sh</a> | Debian/Ubuntu | **Sublime-Text 3 & 4, Visual Studio Codium, Microsoft Visual Studio Code**
+<a href="https://github.com/bradsec/bashscripts/tree/main/codeditapps.sh" target="_blank">codeditapps.sh</a> | Debian/Ubuntu | **Sublime-Text 3 & 4, Visual Studio Codium, Microsoft Visual Studio Code (VSCode)**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeeditapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/vmapps.sh" target="_blank">vmapps.sh</a> | Debian/Ubuntu | **VMWare Workstation & Player, Oracle VirtualBox**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"```
-<a href="https://github.com/bradsec/bashscripts/tree/main/unifiapps.sh" target="_blank">unifiapps.sh</a> | Raspberry Pi | **Unifi Controller** (*notes below)
+<a href="https://github.com/bradsec/bashscripts/tree/main/unifiapps.sh" target="_blank">unifiapps.sh</a> | Raspberry Pi | **Unifi Controller** (*1)
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/unifiapps.sh)"```
 
 
 
-### Troubleshooting/Notes Raspberry Pi Unifi Controller
+#### 1. Notes/Troubleshooting Raspberry Pi Unifi Controller
 
 * Reboot after installation or removal.  
 * Check status of unifi service using: `sudo systemctl status unifi`  

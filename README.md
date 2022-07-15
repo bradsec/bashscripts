@@ -8,8 +8,12 @@ These scripts have been created to simplify and automate the installation of var
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
 
 ### Usage Options
-1. Clone the repo `git clone https://github.com/bradsec/bashscripts.git` and run the required .sh script.
-2. Alternatively copy/use run the script directly :- 
+1. Clone the repo and run the required script.
+```terminal
+git clone https://github.com/bradsec/bashscripts.git
+sudo bash ./bashscripts/passwordapps.sh
+```
+2. Alternatively use the one line command provided and run the script directly. 
 ```
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/scriptname.sh)"
 ```

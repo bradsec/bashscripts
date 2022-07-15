@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_SOURCE="github.com/bradsec/bashscripts/browsers.sh"
+SCRIPT_SOURCE="github.com/bradsec/bashscripts/browserapps.sh"
 
 #### START OF REQUIRED INFORMATION FOR IMPORTING BASH TEMPLATES ###
 TEMPLATES_REQUIRED="generic.tmpl.sh debian.tmpl.sh"
@@ -69,7 +69,6 @@ install_firefox() {
     run_command rm ${save_file}
 	message DONEFULL "Firefox installed."
 }
-
 
 install_brave() {
 	message INFOFULL "This will install the latest Brave browser version."

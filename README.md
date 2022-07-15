@@ -4,7 +4,7 @@ These scripts have been created to simplify and automate the installation of var
 ### Notes
 * Scripts inherit common functions from the imported <a href="https://github.com/bradsec/bashscripts/tree/main/templates" target="_blank">templates</a>.  
 * Most of the Debian app installers fetch 64-bit architecture sources, the script sources may need modification to run on other system architecture such as 32-bit.
-* Installers will use latest sources where possible from original publisher sites or github release repos.  
+* Where possible installers will use latest sources from original author/publisher sites or github release repos instead of using Flatpaks or Snap Store package installs.  
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
 
 ### Usage Options
@@ -32,14 +32,16 @@ Scriptname | Compatability | Applications
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeeditapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/vmapps.sh" target="_blank">vmapps.sh</a> | Debian/Ubuntu | **VMWare Workstation & Player, Oracle VirtualBox**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"```
-<a href="https://github.com/bradsec/bashscripts/tree/main/unifiapps.sh" target="_blank">unifiapps.sh</a> | Raspberry Pi | **Unifi Controller** (*1)
+<a href="https://github.com/bradsec/bashscripts/tree/main/goapps.sh" target="_blank">goapps.sh</a> | Debian/Ubuntu | **Go (golang) Programming Language**
+|||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/goapps.sh)"```
+<a href="https://github.com/bradsec/bashscripts/tree/main/unifiapps.sh" target="_blank">unifiapps.sh</a> | Raspberry Pi | **Unifi Controller** (**)
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/unifiapps.sh)"```
 
 
 
-#### *1. Notes/Troubleshooting Raspberry Pi Unifi Controller
+#### ** Notes/Troubleshooting Raspberry Pi Unifi Controller
 
-* Reboot after installation or removal.  
+* Reboot Raspberry Pi after installation or removal.  
 * Check status of unifi service using: `sudo systemctl status unifi`  
 ```terminal
 Sample output of running service (check Active: active)

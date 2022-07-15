@@ -83,6 +83,7 @@ install_brave() {
 	# Update packages and install
 	pkgman update
 	pkgman install brave-browser
+	message DONEFULL "Brave installed."
 }
 
 install_tor_browser(){
@@ -110,6 +111,7 @@ install_chrome() {
 	save_file="/tmp/chrome.deb"
 	download_file ${save_file} ${from_url}
 	pkgman install ${save_file}
+	message DONEFULL "Chrome installed."
 }
 
 

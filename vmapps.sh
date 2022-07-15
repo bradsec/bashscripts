@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPT_SOURCE="github.com/bradsec/bashscripts/vmware.sh"
+SCRIPT_SOURCE="github.com/bradsec/bashscripts/vmapps.sh"
 
 #### START OF REQUIRED INFORMATION FOR IMPORTING BASH TEMPLATES ###
 TEMPLATES_REQUIRED="generic.tmpl.sh debian.tmpl.sh"

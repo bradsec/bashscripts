@@ -33,7 +33,7 @@ Scriptname | Compatability | Applications
 
 
 
-#### 1. Notes/Troubleshooting Raspberry Pi Unifi Controller
+#### *1. Notes/Troubleshooting Raspberry Pi Unifi Controller
 
 * Reboot after installation or removal.  
 * Check status of unifi service using: `sudo systemctl status unifi`  

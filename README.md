@@ -7,7 +7,7 @@
 
 
 ### Usage
-* Clone the repo `git clone https://github.com/bradsec/bashscripts.git` and run required .sh script.
+* Clone the repo `git clone https://github.com/bradsec/bashscripts.git` and run the required .sh script.
 * Alternatively copy/use the one-liner `sudo bash -c ...` terminal command shown below each script.
 
 <br/><br/>
@@ -54,8 +54,9 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/
 * View script: <a href="https://github.com/bradsec/bashscripts/tree/main/browserapps.sh" target="_blank">browserapps.sh</a>
 ```terminal
 1. Install Firefox
-2. Install Brave
-3. Install TOR Browser
+2. Install Google Chrome
+3. Install Brave
+4. Install TOR Browser
 ```
 ```terminal
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/browserapps.sh)"

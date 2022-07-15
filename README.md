@@ -24,7 +24,7 @@ Scriptname | Compatability | Applications
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messengerapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/browserapps.sh" target="_blank">browserapps.sh</a> | Debian/Ubuntu | **Firefox, Google Chrome, Brave, TOR Browser**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/browserapps.sh)"```
-<a href="https://github.com/bradsec/bashscripts/tree/main/codeditapps.sh" target="_blank">codeeditapps.sh</a> | Debian/Ubuntu | **Sublime-Text 3 & 4, Visual Studio Codium, Microsoft Visual Studio Code (VSCode)**
+<a href="https://github.com/bradsec/bashscripts/tree/main/codeeditapps.sh" target="_blank">codeeditapps.sh</a> | Debian/Ubuntu | **Sublime-Text 3 & 4, Visual Studio Codium, Microsoft Visual Studio Code (VSCode)**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeeditapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/vmapps.sh" target="_blank">vmapps.sh</a> | Debian/Ubuntu | **VMWare Workstation & Player, Oracle VirtualBox**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"```

@@ -32,15 +32,19 @@ Scriptname | Compatability | Applications
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/codeeditapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/vmapps.sh" target="_blank">vmapps.sh</a> | Debian/Ubuntu | **VMWare Workstation & Player, Oracle VirtualBox**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/vmapps.sh)"```
-<a href="https://github.com/bradsec/bashscripts/tree/main/goapps.sh" target="_blank">goapps.sh</a> | Debian/Ubuntu | **Go (golang) Programming Language**
+<a href="https://github.com/bradsec/bashscripts/tree/main/goapps.sh" target="_blank">goapps.sh</a> | Debian/Ubuntu | **Go (golang) Programming Language** (**)
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/goapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/unifiapps.sh" target="_blank">unifiapps.sh</a> | Raspberry Pi | **Unifi Controller** (**)
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/unifiapps.sh)"```
 
 
+### Notes/Troubleshooting 
 
-#### ** Notes/Troubleshooting Raspberry Pi Unifi Controller
+#### ** Go (golang) install
+If the Go path is not found for a non-root user try running the following command:  
+`source /etc/profile.d/go.sh`
 
+#### ** Raspberry Pi Unifi Controller install
 * Reboot Raspberry Pi after installation or removal.  
 * Check status of unifi service using: `sudo systemctl status unifi`  
 ```terminal

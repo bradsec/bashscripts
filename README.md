@@ -48,6 +48,8 @@ Scriptname | Compatability | Applications
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/noteapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/messengerapps.sh" target="_blank">messengerapps.sh</a> | Debian/Ubuntu | **Signal, Threema**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/messengerapps.sh)"```
+<a href="https://github.com/bradsec/bashscripts/tree/main/officeapps.sh" target="_blank">officeapps.sh</a> | Debian/Ubuntu | **OnlyOffice, LibreOffice**
+|||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/officeapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/collabapps.sh" target="_blank">collabapps.sh</a> | Debian/Ubuntu | **Discord, Slack, Zoom, Microsoft Teams**
 |||```sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/bradsec/bashscripts/main/collabapps.sh)"```
 <a href="https://github.com/bradsec/bashscripts/tree/main/browserapps.sh" target="_blank">browserapps.sh</a> | Debian/Ubuntu | **Firefox, Google Chrome, Brave, TOR Browser**

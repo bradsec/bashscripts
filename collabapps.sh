@@ -51,6 +51,15 @@ install_teams() {
 	pkgman fix
 }
 
+install_zoom() {
+	message INFO "Installing Zoom..."
+	from_url="https://zoom.us/client/latest/zoom_amd64.deb"
+	save_file="/tmp/zoom.deb"
+	download_file ${save_file} ${from_url}
+	pkgman install ${save_file}
+	pkgman fix
+}
+
 install_slack() {
 	message INFO "Installing Slack..."
 	# Two fixes below for missing packages in Debian Bullseye
@@ -82,12 +91,14 @@ display_menu () {
 	echo
     echo -e "1. Install Discord"
 	echo -e "2. Install Slack"
-	echo -e "3. Install Microsoft Teams\n"
-    echo -e "4. Remove Discord"
-    echo -e "5. Remove Slack"
-	echo -e "6. Remove Microsoft Teams\n"
-    echo -e "7. Exit\n"
-    echo -n "   Enter option [1-7]: "
+	echo -e "3. Install Zoom"
+	echo -e "4. Install Microsoft Teams\n"
+    echo -e "5. Remove Discord"
+    echo -e "6. Remove Slack"
+    echo -e "7. Remove Zoom"
+	echo -e "8. Remove Microsoft Teams\n"
+    echo -e "9. Exit\n"
+    echo -n "   Enter option [1-9]: "
 
     while :
     do
@@ -102,19 +113,26 @@ display_menu () {
 			install_slack
 			;;
 		3)  clear
+			pkgman remove zoom
+			install_zoom
+			;;
+		4)  clear
 			pkgman remove teams
 			install_teams
 			;;
-		4)  clear
+		5)  clear
 			pkgman remove discord
 			;;
-		5)  clear
+		6)  clear
 			pkgman remove slack-desktop
 			;;
-		6)  clear
+		7)  clear
+			pkgman remove zoom
+			;;
+		8)  clear
 			pkgman remove teams
 			;;
-		7)  clear
+		9)  clear
 			exit
 			;;
 		*)  clear

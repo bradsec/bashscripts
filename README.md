@@ -6,6 +6,28 @@ These scripts have been created to simplify and automate the installation of var
 * Most of the Debian app installers fetch 64-bit architecture sources, the script sources may need modification to run on other system architecture such as 32-bit.
 * Where possible installers will use latest sources from original author/publisher sites or github release repos instead of using Flatpaks or Snap Store package installs.  
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
+* Menu options for application installation and removal are provided in each script as per example below:
+
+```terminal
+==============
+ Menu Options 
+==============
+
+1. Install Firefox
+2. Install Google Chrome
+3. Install Brave
+4. Install TOR Browser
+
+5. Remove Firefox
+6. Remove Google Chrome
+7. Remove Brave
+8. Remove TOR Browser
+
+9. Exit
+
+   Enter option [1-9]: 
+```
+
 
 ### Usage Options
 1. Clone the repo and run the required script.

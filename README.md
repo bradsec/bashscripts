@@ -1,9 +1,9 @@
-## [bashscripts]
+# Debian Linux (including Kali, Ubuntu, PopOS)<br>Application Installation Automation Shell / Bash Scripts
 These scripts have been created to simplify and automate the installation of various Debian Linux and some macOS applications. The scripts will work with most Debian based Linux distros such as Ubuntu, Kali and Pop!_OS.
 
 ### Notes
 * Scripts inherit common functions from the imported <a href="https://github.com/bradsec/bashscripts/tree/main/templates" target="_blank">templates</a>.  
-* Most of the Debian app installers fetch 64-bit architecture sources, the script sources may need modification to run on other system architecture such as 32-bit.
+* Most of the Debian app installers fetch x64 sources, the script sources may need modification to run on other system architecture such as x86 (32-bit) or arm processors.
 * Where possible installers will use latest sources from original author/publisher sites or github release repos instead of using Flatpaks or Snap Store package installs.  
 * File hashes will be shown during installation for any downloaded packages for security comparison with publisher if required.
 * Menu options for application installation and removal are provided in each script as per example below:
